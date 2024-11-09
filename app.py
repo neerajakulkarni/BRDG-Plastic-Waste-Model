@@ -68,13 +68,17 @@ def predict_route():
     # Predict plastic type
     prediction = predict_plastic_type(img_path)
     if prediction == 0:
-        prediction = "PET - 1"
+        print(prediction)
+        prediction = "recyclable"
     elif prediction == 1:
-        prediction = "HDPE - 2"
+        print(prediction)
+        prediction = "recyclable"
     elif prediction == 2:
-        prediction = "PP - 5"
+        print(prediction)
+        prediction = "recyclable"
     else:
-        prediction = "PS - 6"
+        print(prediction)
+        prediction = "recyclable"
 
     # Remove the uploaded file after processing
     os.remove(img_path)
